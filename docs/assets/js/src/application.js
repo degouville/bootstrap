@@ -4,12 +4,12 @@
 
 /*!
  * JavaScript for Bootstrap's docs (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
- * details, see http://creativecommons.org/licenses/by/3.0/.
+ * details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-/* global ZeroClipboard, addAnchors */
+/* global ZeroClipboard, anchors */
 
 !function ($) {
   'use strict';
@@ -28,7 +28,7 @@
     })
 
     // Kill links
-    $('.bs-docs-container [href=#]').click(function (e) {
+    $('.bs-docs-container [href="#"]').click(function (e) {
       e.preventDefault()
     })
 
@@ -56,7 +56,7 @@
       $('.bs-top').affix()
     }, 100)
 
-    // theme toggler
+    // Theme toggler
     ;(function () {
       var $stylesheetLink = $('#bs-theme-stylesheet')
       var $themeBtn = $('.bs-docs-theme-toggle')
@@ -178,5 +178,6 @@
 ;(function () {
   'use strict';
 
-  addAnchors('.bs-docs-section > h1, .bs-docs-section > h2, .bs-docs-section > h3, .bs-docs-section > h4, .bs-docs-section > h5')
+  anchors.options.placement = 'left';
+  anchors.add('.bs-docs-section > h1, .bs-docs-section > h2, .bs-docs-section > h3, .bs-docs-section > h4, .bs-docs-section > h5')
 })();
